@@ -22,6 +22,9 @@ public class ArrayListDemo {
         for (String element : list) {
             System.out.print(element + " ");
         }
+        list.addFirst("7");
+        System.out.println(list);
+        System.out.println(list.contains("Orange"));
 
     }
 
