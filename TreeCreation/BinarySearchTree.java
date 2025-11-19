@@ -82,7 +82,7 @@ public class BinarySearchTree {
         return list;
     }
 
-    public ArrayList<Integer> DFS() {
+    public ArrayList<Integer> DFSPreOrder() {
         ArrayList<Integer> list = new ArrayList<>();
         class Traverse {
             Traverse(Node currentNode) {
@@ -97,5 +97,23 @@ public class BinarySearchTree {
         }
         new Traverse(root);
         return list;
+    }
+
+    public ArrayList<Integer> DFSPostOrder() {
+        ArrayList<Integer> result = new ArrayList<>();
+        class Traverse {
+            Traverse(Node currentNode) {
+                if (currentNode.left != null) {
+                    new Traverse(currentNode.left);
+                }
+                if (currentNode.right != null) {
+                    new Traverse(currentNode.right);
+                }
+                result.add(currentNode.val);
+
+            }
+        }
+        new Traverse(root);
+        return result;
     }
 }

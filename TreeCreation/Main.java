@@ -10,8 +10,12 @@ public class Main {
         System.out.println(bst.insert(12));
         System.out.println(bst.root.right.val);
         System.out.println(bst.contains(4));
+        System.out.println("BFS traversal");
         System.out.println(bst.BFS());
         bst.insert(5);
-        System.out.println(bst.DFS());
+        System.out.println("Pre Order");
+        System.out.println(bst.DFSPreOrder());
+        System.out.println("Post Order");
+        System.out.println(bst.DFSPostOrder());
     }
 }
